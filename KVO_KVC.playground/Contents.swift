@@ -3,7 +3,7 @@
 import UIKit
 import PlaygroundSupport
 
-/*class Person : NSObject {
+class Person : NSObject {
     @objc dynamic var name: String
     @objc var age: Int
     @objc var gender: String
@@ -15,7 +15,7 @@ import PlaygroundSupport
     }
 }
 // Present the view controller in the Live View window
-var person = Person(name: "Bhavesh")
+/*var person = Person(name: "Bhavesh")
 
 let name = person.value(forKey: "name") as? String
 let age = person.value(forKey: "age") as? Int
@@ -31,7 +31,7 @@ let keyPath = \Person.name
 let nameUsingKeyPath = person[keyPath: keyPath]
 print("Name of Person Using Keypath: \(nameUsingKeyPath)")*/
 
-/*class Observer: NSObject {
+class Observer: NSObject {
     var observation : NSKeyValueObservation?
     
     func startObserving(person : Person) -> Void {
@@ -48,7 +48,7 @@ let obeserver = Observer()
 obeserver.startObserving(person: person)
 
 person.setValue("Patel", forKey: "name")
-person.name = "Bhavesh Patel"
+person.name = "Bhavesh Patel" // When you remove dynamic property from name of person class then this update will not be notify to the observer method.
 
-print("Update without KVC: \(person.name)")*/
+print("Update without KVC: \(person.name)")
 
